@@ -53,7 +53,7 @@ function playSound(name){
 
        
 
-$("html").on("touchstart keydown",function(){
+$("html").on("click keydown",function(){
 if(!started){
   
    
