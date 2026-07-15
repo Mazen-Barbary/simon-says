@@ -53,7 +53,7 @@ function playSound(name){
 
        
 
-$("html").on("click keydown",function(){
+$("html").on("click keydown",function(event){
 if(!started){
 
     if ($(event.target).hasClass("btn")) return;
