@@ -53,7 +53,7 @@ function playSound(name){
 
        
 
-$("html").keydown(function(){
+$("html").on("click keydown",function(){
 if(!started){
   
    
