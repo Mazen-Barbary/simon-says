@@ -55,7 +55,8 @@ function playSound(name){
 
 $("html").on("click keydown",function(){
 if(!started){
-  
+
+    if ($(event.target).hasClass("btn")) return;
    
     $("#level-title").text(level);
        nextSequence();
