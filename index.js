@@ -54,13 +54,22 @@ function playSound(name){
        
 
 $("html").on("click keydown",function(event){
-if(!started){
+if (started) {
+        return;
+    }
 
-    if ($(event.target).hasClass("btn")) return;
-   
-    $("#level-title").text(level);
-       nextSequence();
+    // 2. If it's a click, check if they clicked a button
+    // If they clicked a button, we don't want to start the game,
+    // because that click is meant for playing the game.
+    if (event.type === "click" && $(event.target).closest(".btn").length > 0) {
+        return;
+    }
+
+    // 3. Otherwise, start the game
+    $("#level-title").text("Level " + level);
+    nextSequence();
     started = true;
+});
    
 }
 });
